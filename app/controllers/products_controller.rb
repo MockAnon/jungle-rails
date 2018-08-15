@@ -8,4 +8,16 @@ class ProductsController < ApplicationController
     @product = Product.find params[:id]
   end
 
+
+
+  # def sold_out
+  #   @sold = "<a>SOLD OUT</a>".html_safe
+  #   # @sold = "<a>SOLD OUT</a>".html_safe
+  #   # if (product.quantity === 0)
+  #   #   @sold = "<aside class='sold'> <a>SOLD OUT</a> </aside>".html_safe
+  #   # end
+
+  # end
+
+  puts @sold
 end
