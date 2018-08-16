@@ -1,0 +1,41 @@
+
+
+<% product = Product.find_by(id: product_id) %>
+
+  <tr>
+    <td>
+      <%= image_tag product.image.tiny %>
+    </td>
+    <td>
+      <h4><%= product.name %></h4>
+      <br>
+      <p><%= product.description %></p>
+    </td>
+    <td>
+      <%= product.price %>
+    </td>
+
+    <td>
+      Quantity#<%= quantity %>
+    </td>
+
+    <td>
+      Item Total#<%= product.price * quantity %>
+    </td>
+
+    <td>
+
+    </td>
+
+  </tr>
+
+
+
+
+  <!-- The items in the order and:
+Their image, name and description
+Their respective quantities and line item totals
+The final amount for the order
+The email that was used -->
+
+
