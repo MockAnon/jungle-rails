@@ -4,6 +4,17 @@
     <h1>My Cart</h1>
   </header>
 
+
+  <% puts "@cart #{cart.count}"%>
+
+  <% if cart.count == 0 %>
+
+    <p> Your cart is empty click below to return home </p>
+
+    <button> <%= link_to 'Home', :root %> </button>
+
+  <% else %>
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -15,7 +26,11 @@
         </tr>
       </thead>
       <tbody>
+
         <% @cart_total = 0 %>
+
+
+
         <% cart.each do |product_id, details| %>
           <%= render 'item', product_id: product_id, details: details %>
         <% end %>
@@ -49,5 +64,7 @@
       <% end %>
     </div>
   </div>
+  <% end %>
+
 
 </section>
