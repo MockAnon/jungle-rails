@@ -2,8 +2,14 @@ Rails.application.routes.draw do
 
   root to: 'products#index'
 
-  resources :products, only: [:index, :show]
+  resources :products, only: [:index, :show] do
+    resources :reviews, only: [:create, :delete]
+  end
   resources :categories, only: [:show]
+
+
+
+
 
   resource :cart, only: [:show] do
     put    :add_item
@@ -17,12 +23,19 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:index, :new, :create]
 
+#                           review
+
+
  #            I added this in
     # resources :users, only: [:new, :create]
 
 
 
   end
+
+
+
+
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
@@ -31,6 +44,8 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+
+
 
 # config/routes.rb
 

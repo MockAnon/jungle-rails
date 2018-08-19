@@ -11,6 +11,11 @@ class Product < ActiveRecord::Base
   validates :quantity, presence: true
   validates :category, presence: true
 
+  has_many :reviews, dependent: :destroy
+
+
+
+
 
 
 

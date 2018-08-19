@@ -132,5 +132,29 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+# reviews
+
+user = User.create
+
+Review.create({
+  product: Product.first,
+  user: User.first,
+  description: "TRASH PRODUCT",
+  rating: 1
+})
+Review.create({
+  product: Product.first,
+  user: User.first,
+  description: "Better This time",
+  rating: 4
+})
+Review.create({
+  product: Product.first,
+  user: User.first,
+  description: "Slightly worse!!!",
+  rating: 3
+})
+
+
 
 puts "DONE!"
