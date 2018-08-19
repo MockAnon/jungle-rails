@@ -1,4 +1,8 @@
+!["Screenshot of Jungle"](https://github.com/MockAnon/jungle-rails/blob/master/docs/Jungle3.png)
 
+!["Screenshot of Jungle"](https://github.com/MockAnon/jungle-rails/blob/master/docs/Jungle2.png)
+
+!["Screenshot of Jungle"](https://github.com/MockAnon/jungle-rails/blob/master/docs/Jungle1.png)
 
 # Jungle
 
